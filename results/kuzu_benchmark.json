@@ -1,0 +1,196 @@
+{
+  "metadata": {
+    "database": "K\u00f9zu (256MB capped)",
+    "timestamp": "2026-08-24T10:15:15Z",
+    "dataset": "SNAP soc-Pokec Social Network Sample (100k edges)",
+    "node_count": 49683,
+    "edge_count": 100000,
+    "iterations": 100,
+    "warmup": 10
+  },
+  "data_loading": {
+    "database": "Kùzu (256MB capped)",
+    "nodes_count": 49683,
+    "rels_count": 100000,
+    "node_time_sec": 0.05,
+    "edge_time_sec": 0.03,
+    "total_time_sec": 0.08,
+    "node_rate_per_sec": 975375.0,
+    "edge_rate_per_sec": 3021863.2
+  },
+
+  "traversals": {
+    "1_hop": {
+      "p50": 0.231,
+      "p90": 0.258,
+      "p95": 0.284,
+      "p99": 0.293,
+      "mean": 0.233,
+      "stddev": 0.021,
+      "min": 0.2,
+      "max": 0.3,
+      "count": 100,
+      "throughput_qps": 4272.91,
+      "success_count": 100,
+      "failure_count": 0,
+      "total_wall_sec": 0.023
+    },
+    "2_hop": {
+      "p50": 0.373,
+      "p90": 0.424,
+      "p95": 0.435,
+      "p99": 0.479,
+      "mean": 0.381,
+      "stddev": 0.033,
+      "min": 0.321,
+      "max": 0.502,
+      "count": 100,
+      "throughput_qps": 2622.67,
+      "success_count": 100,
+      "failure_count": 0,
+      "total_wall_sec": 0.038
+    },
+    "3_hop": {
+      "p50": 0.717,
+      "p90": 0.773,
+      "p95": 0.795,
+      "p99": 0.808,
+      "mean": 0.723,
+      "stddev": 0.037,
+      "min": 0.654,
+      "max": 0.828,
+      "count": 100,
+      "throughput_qps": 1382.48,
+      "success_count": 100,
+      "failure_count": 0,
+      "total_wall_sec": 0.072
+    }
+  },
+  "lookups": {
+    "point_lookup": {
+      "p50": 0.078,
+      "p90": 0.098,
+      "p95": 0.101,
+      "p99": 0.113,
+      "mean": 0.081,
+      "stddev": 0.011,
+      "min": 0.067,
+      "max": 0.144,
+      "count": 100,
+      "throughput_qps": 12272.26,
+      "success_count": 100,
+      "failure_count": 0,
+      "total_wall_sec": 0.008
+    },
+    "filtered_lookup": {
+      "p50": 0.263,
+      "p90": 0.294,
+      "p95": 0.31,
+      "p99": 0.325,
+      "mean": 0.263,
+      "stddev": 0.024,
+      "min": 0.212,
+      "max": 0.331,
+      "count": 100,
+      "throughput_qps": 3788.52,
+      "success_count": 100,
+      "failure_count": 0,
+      "total_wall_sec": 0.026
+    },
+    "indexed_properties": [
+      "User.id (Unique Index)"
+    ]
+  },
+  "aggregations": {
+    "degree_aggregation": {
+      "p50": 1.356,
+      "p90": 1.399,
+      "p95": 1.415,
+      "p99": 1.485,
+      "mean": 1.353,
+      "stddev": 0.045,
+      "min": 1.269,
+      "max": 1.487,
+      "count": 50,
+      "throughput_qps": 738.59,
+      "success_count": 50,
+      "failure_count": 0,
+      "total_wall_sec": 0.068
+    },
+    "count_aggregation": {
+      "p50": 0.681,
+      "p90": 0.708,
+      "p95": 0.719,
+      "p99": 0.726,
+      "mean": 0.679,
+      "stddev": 0.022,
+      "min": 0.634,
+      "max": 0.726,
+      "count": 50,
+      "throughput_qps": 1470.79,
+      "success_count": 50,
+      "failure_count": 0,
+      "total_wall_sec": 0.034
+    }
+  },
+  "mixed_workload": {
+    "concurrency_1": {
+      "p50": 0.239,
+      "p90": 0.272,
+      "p95": 0.281,
+      "p99": 0.306,
+      "mean": 0.189,
+      "stddev": 0.082,
+      "min": 0.071,
+      "max": 0.322,
+      "count": 42,
+      "concurrency": 1,
+      "read_write_mix": "80% Read / 19% Write",
+      "sustained_qps": 3515.82,
+      "total_operations": 50,
+      "wall_time_sec": 0.012
+    },
+    "concurrency_10": {
+      "p50": 1.356,
+      "p90": 3.071,
+      "p95": 3.863,
+      "p99": 5.936,
+      "mean": 1.449,
+      "stddev": 1.438,
+      "min": 0.073,
+      "max": 13.123,
+      "count": 405,
+      "concurrency": 10,
+      "read_write_mix": "80% Read / 19% Write",
+      "sustained_qps": 5102.7,
+      "total_operations": 500,
+      "wall_time_sec": 0.079
+    },
+    "concurrency_40": {
+      "p50": 5.32,
+      "p90": 12.317,
+      "p95": 17.464,
+      "p99": 27.571,
+      "mean": 5.42,
+      "stddev": 5.904,
+      "min": 0.072,
+      "max": 39.939,
+      "count": 1592,
+      "concurrency": 40,
+      "read_write_mix": "80% Read / 19% Write",
+      "sustained_qps": 5326.35,
+      "total_operations": 2000,
+      "wall_time_sec": 0.299
+    }
+  },
+  "resource_footprint": {
+    "tier": "Embedded / Self-hosted baseline",
+    "vcpu": "0.5 vCPU equivalent",
+    "memory": "256 MB RAM (enforced via buffer_pool_size)",
+    "storage_limit": "1 GB disk limit",
+    "engine": "K\u00f9zu Vectorized Columnar Engine",
+    "managed_cloud": "No (Local / Embedded)",
+    "stored_data_size": "0.00 MB",
+    "memory_usage": "256.00 MB allocated buffer"
+  }
+}

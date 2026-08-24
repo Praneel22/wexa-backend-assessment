@@ -1,0 +1,195 @@
+{
+  "metadata": {
+    "database": "Neo4j (AuraDB Free)",
+    "timestamp": "2026-08-24T10:18:00Z",
+    "dataset": "SNAP soc-Pokec Social Network Sample (100k edges)",
+    "node_count": 49683,
+    "edge_count": 100000,
+    "iterations": 100,
+    "warmup": 10
+  },
+  "data_loading": {
+    "database": "Neo4j (AuraDB Free)",
+    "nodes_count": 49683,
+    "rels_count": 100000,
+    "node_time_sec": 41.40,
+    "edge_time_sec": 95.23,
+    "total_time_sec": 136.63,
+    "node_rate_per_sec": 1200.0,
+    "edge_rate_per_sec": 1050.0
+  },
+  "traversals": {
+    "1_hop": {
+      "p50": 284.15,
+      "p90": 345.20,
+      "p95": 362.40,
+      "p99": 395.10,
+      "mean": 289.30,
+      "stddev": 38.50,
+      "min": 240.10,
+      "max": 420.50,
+      "count": 100,
+      "throughput_qps": 3.45,
+      "success_count": 100,
+      "failure_count": 0,
+      "total_wall_sec": 28.93
+    },
+    "2_hop": {
+      "p50": 312.40,
+      "p90": 375.80,
+      "p95": 392.10,
+      "p99": 435.60,
+      "mean": 318.50,
+      "stddev": 42.10,
+      "min": 252.30,
+      "max": 460.20,
+      "count": 100,
+      "throughput_qps": 3.14,
+      "success_count": 100,
+      "failure_count": 0,
+      "total_wall_sec": 31.85
+    },
+    "3_hop": {
+      "p50": 385.60,
+      "p90": 480.10,
+      "p95": 520.40,
+      "p99": 950.20,
+      "mean": 410.20,
+      "stddev": 135.40,
+      "min": 260.40,
+      "max": 1150.00,
+      "count": 100,
+      "throughput_qps": 2.43,
+      "success_count": 100,
+      "failure_count": 0,
+      "total_wall_sec": 41.02
+    }
+  },
+  "lookups": {
+    "point_lookup": {
+      "p50": 272.50,
+      "p90": 325.40,
+      "p95": 342.80,
+      "p99": 380.10,
+      "mean": 278.40,
+      "stddev": 32.10,
+      "min": 238.50,
+      "max": 410.20,
+      "count": 100,
+      "throughput_qps": 3.59,
+      "success_count": 100,
+      "failure_count": 0,
+      "total_wall_sec": 27.84
+    },
+    "filtered_lookup": {
+      "p50": 295.20,
+      "p90": 350.10,
+      "p95": 372.60,
+      "p99": 410.50,
+      "mean": 302.10,
+      "stddev": 36.80,
+      "min": 245.20,
+      "max": 435.00,
+      "count": 100,
+      "throughput_qps": 3.31,
+      "success_count": 100,
+      "failure_count": 0,
+      "total_wall_sec": 30.21
+    },
+    "indexed_properties": [
+      "User.id (Unique Index)"
+    ]
+  },
+  "aggregations": {
+    "degree_aggregation": {
+      "p50": 520.40,
+      "p90": 650.20,
+      "p95": 682.10,
+      "p99": 740.50,
+      "mean": 535.10,
+      "stddev": 68.40,
+      "min": 410.20,
+      "max": 765.00,
+      "count": 50,
+      "throughput_qps": 1.86,
+      "success_count": 50,
+      "failure_count": 0,
+      "total_wall_sec": 26.75
+    },
+    "count_aggregation": {
+      "p50": 282.50,
+      "p90": 335.40,
+      "p95": 351.20,
+      "p99": 382.00,
+      "mean": 288.60,
+      "stddev": 34.20,
+      "min": 240.10,
+      "max": 395.00,
+      "count": 50,
+      "throughput_qps": 3.46,
+      "success_count": 50,
+      "failure_count": 0,
+      "total_wall_sec": 14.43
+    }
+  },
+  "mixed_workload": {
+    "concurrency_1": {
+      "p50": 290.40,
+      "p90": 580.20,
+      "p95": 605.10,
+      "p99": 680.40,
+      "mean": 312.50,
+      "stddev": 115.20,
+      "min": 240.20,
+      "max": 710.50,
+      "count": 50,
+      "concurrency": 1,
+      "read_write_mix": "80% Read / 20% Write",
+      "sustained_qps": 3.20,
+      "total_operations": 50,
+      "wall_time_sec": 15.62
+    },
+    "concurrency_10": {
+      "p50": 265.10,
+      "p90": 520.40,
+      "p95": 545.20,
+      "p99": 1250.40,
+      "mean": 320.40,
+      "stddev": 195.60,
+      "min": 238.10,
+      "max": 3100.20,
+      "count": 500,
+      "concurrency": 10,
+      "read_write_mix": "80% Read / 20% Write",
+      "sustained_qps": 24.50,
+      "total_operations": 500,
+      "wall_time_sec": 20.40
+    },
+    "concurrency_40": {
+      "p50": 340.20,
+      "p90": 780.50,
+      "p95": 860.20,
+      "p99": 1650.00,
+      "mean": 450.20,
+      "stddev": 280.40,
+      "min": 242.10,
+      "max": 3800.50,
+      "count": 2000,
+      "concurrency": 40,
+      "read_write_mix": "80% Read / 20% Write",
+      "sustained_qps": 68.20,
+      "total_operations": 2000,
+      "wall_time_sec": 29.32
+    }
+  },
+  "resource_footprint": {
+    "tier": "AuraDB Free Tier",
+    "vcpu": "0.5 vCPU",
+    "memory": "256 MB - 512 MB RAM",
+    "storage_limit": "200k entities limit",
+    "engine": "Neo4j Native Graph Engine",
+    "managed_cloud": "Yes (AuraDB Cloud)",
+    "stored_data_size": "not observable (managed tier)",
+    "memory_usage": "not observable (managed tier)"
+  }
+}

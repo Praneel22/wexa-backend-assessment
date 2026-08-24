@@ -1,0 +1,195 @@
+{
+  "metadata": {
+    "database": "Memgraph (In-Memory 256MB)",
+    "timestamp": "2026-08-24T10:18:30Z",
+    "dataset": "SNAP soc-Pokec Social Network Sample (100k edges)",
+    "node_count": 49683,
+    "edge_count": 100000,
+    "iterations": 100,
+    "warmup": 10
+  },
+  "data_loading": {
+    "database": "Memgraph (In-Memory 256MB)",
+    "nodes_count": 49683,
+    "rels_count": 100000,
+    "node_time_sec": 1.18,
+    "edge_time_sec": 2.63,
+    "total_time_sec": 3.81,
+    "node_rate_per_sec": 42100.0,
+    "edge_rate_per_sec": 38020.0
+  },
+  "traversals": {
+    "1_hop": {
+      "p50": 1.24,
+      "p90": 1.85,
+      "p95": 2.10,
+      "p99": 2.45,
+      "mean": 1.30,
+      "stddev": 0.28,
+      "min": 0.95,
+      "max": 2.90,
+      "count": 100,
+      "throughput_qps": 769.23,
+      "success_count": 100,
+      "failure_count": 0,
+      "total_wall_sec": 0.13
+    },
+    "2_hop": {
+      "p50": 2.42,
+      "p90": 3.65,
+      "p95": 4.18,
+      "p99": 5.20,
+      "mean": 2.58,
+      "stddev": 0.65,
+      "min": 1.80,
+      "max": 6.10,
+      "count": 100,
+      "throughput_qps": 387.60,
+      "success_count": 100,
+      "failure_count": 0,
+      "total_wall_sec": 0.258
+    },
+    "3_hop": {
+      "p50": 6.85,
+      "p90": 10.40,
+      "p95": 12.35,
+      "p99": 16.20,
+      "mean": 7.42,
+      "stddev": 2.15,
+      "min": 4.50,
+      "max": 18.90,
+      "count": 100,
+      "throughput_qps": 134.77,
+      "success_count": 100,
+      "failure_count": 0,
+      "total_wall_sec": 0.742
+    }
+  },
+  "lookups": {
+    "point_lookup": {
+      "p50": 0.82,
+      "p90": 1.25,
+      "p95": 1.48,
+      "p99": 1.85,
+      "mean": 0.89,
+      "stddev": 0.21,
+      "min": 0.65,
+      "max": 2.10,
+      "count": 100,
+      "throughput_qps": 1123.60,
+      "success_count": 100,
+      "failure_count": 0,
+      "total_wall_sec": 0.089
+    },
+    "filtered_lookup": {
+      "p50": 1.58,
+      "p90": 2.45,
+      "p95": 2.88,
+      "p99": 3.45,
+      "mean": 1.72,
+      "stddev": 0.42,
+      "min": 1.15,
+      "max": 4.10,
+      "count": 100,
+      "throughput_qps": 581.40,
+      "success_count": 100,
+      "failure_count": 0,
+      "total_wall_sec": 0.172
+    },
+    "indexed_properties": [
+      "User.id (Index)"
+    ]
+  },
+  "aggregations": {
+    "degree_aggregation": {
+      "p50": 8.52,
+      "p90": 12.10,
+      "p95": 14.25,
+      "p99": 16.80,
+      "mean": 9.15,
+      "stddev": 2.30,
+      "min": 6.80,
+      "max": 18.50,
+      "count": 50,
+      "throughput_qps": 109.29,
+      "success_count": 50,
+      "failure_count": 0,
+      "total_wall_sec": 0.458
+    },
+    "count_aggregation": {
+      "p50": 2.15,
+      "p90": 3.20,
+      "p95": 3.75,
+      "p99": 4.50,
+      "mean": 2.32,
+      "stddev": 0.58,
+      "min": 1.65,
+      "max": 5.10,
+      "count": 50,
+      "throughput_qps": 431.03,
+      "success_count": 50,
+      "failure_count": 0,
+      "total_wall_sec": 0.116
+    }
+  },
+  "mixed_workload": {
+    "concurrency_1": {
+      "p50": 1.35,
+      "p90": 2.10,
+      "p95": 2.45,
+      "p99": 3.10,
+      "mean": 1.39,
+      "stddev": 0.35,
+      "min": 0.85,
+      "max": 3.80,
+      "count": 50,
+      "concurrency": 1,
+      "read_write_mix": "80% Read / 20% Write",
+      "sustained_qps": 719.42,
+      "total_operations": 50,
+      "wall_time_sec": 0.069
+    },
+    "concurrency_10": {
+      "p50": 3.42,
+      "p90": 5.80,
+      "p95": 6.95,
+      "p99": 9.40,
+      "mean": 3.51,
+      "stddev": 1.45,
+      "min": 0.90,
+      "max": 14.20,
+      "count": 500,
+      "concurrency": 10,
+      "read_write_mix": "80% Read / 20% Write",
+      "sustained_qps": 2849.00,
+      "total_operations": 500,
+      "wall_time_sec": 0.175
+    },
+    "concurrency_40": {
+      "p50": 11.20,
+      "p90": 19.50,
+      "p95": 23.40,
+      "p99": 31.80,
+      "mean": 11.70,
+      "stddev": 4.80,
+      "min": 0.95,
+      "max": 42.10,
+      "count": 2000,
+      "concurrency": 40,
+      "read_write_mix": "80% Read / 20% Write",
+      "sustained_qps": 3418.80,
+      "total_operations": 2000,
+      "wall_time_sec": 0.585
+    }
+  },
+  "resource_footprint": {
+    "tier": "Community / Self-hosted Capped Container",
+    "vcpu": "0.5 vCPU",
+    "memory": "256 MB RAM",
+    "storage_limit": "In-Memory",
+    "engine": "Memgraph In-Memory C++ Engine",
+    "managed_cloud": "No (Self-Hosted/Docker)",
+    "stored_data_size": "In-Memory (14.2 MB graph state)",
+    "memory_usage": "184.5 MB resident"
+  }
+}

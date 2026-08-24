@@ -1,0 +1,195 @@
+{
+  "metadata": {
+    "database": "CognoDB Cloud",
+    "timestamp": "2026-08-24T10:14:56Z",
+    "dataset": "SNAP soc-Pokec Social Network Sample (100k edges)",
+    "node_count": 49683,
+    "edge_count": 100000,
+    "iterations": 100,
+    "warmup": 10
+  },
+  "data_loading": {
+    "database": "CognoDB Cloud",
+    "nodes_count": 49683,
+    "rels_count": 100000,
+    "node_time_sec": 7.87,
+    "edge_time_sec": 16.80,
+    "total_time_sec": 24.68,
+    "node_rate_per_sec": 6311.1,
+    "edge_rate_per_sec": 5951.3
+  },
+  "traversals": {
+    "1_hop": {
+      "p50": 304.584,
+      "p90": 358.57,
+      "p95": 372.262,
+      "p99": 393.745,
+      "mean": 294.409,
+      "stddev": 42.061,
+      "min": 250.736,
+      "max": 424.316,
+      "count": 100,
+      "throughput_qps": 3.4,
+      "success_count": 100,
+      "failure_count": 0,
+      "total_wall_sec": 29.442
+    },
+    "2_hop": {
+      "p50": 307.285,
+      "p90": 358.705,
+      "p95": 364.842,
+      "p99": 390.472,
+      "mean": 302.627,
+      "stddev": 37.594,
+      "min": 250.669,
+      "max": 418.144,
+      "count": 100,
+      "throughput_qps": 3.3,
+      "success_count": 100,
+      "failure_count": 0,
+      "total_wall_sec": 30.264
+    },
+    "3_hop": {
+      "p50": 316.48,
+      "p90": 404.921,
+      "p95": 440.973,
+      "p99": 882.401,
+      "mean": 346.096,
+      "stddev": 106.606,
+      "min": 251.234,
+      "max": 1024.025,
+      "count": 100,
+      "throughput_qps": 2.89,
+      "success_count": 100,
+      "failure_count": 0,
+      "total_wall_sec": 34.611
+    }
+  },
+  "lookups": {
+    "point_lookup": {
+      "p50": 308.51,
+      "p90": 364.855,
+      "p95": 381.297,
+      "p99": 412.024,
+      "mean": 317.262,
+      "stddev": 41.069,
+      "min": 251.034,
+      "max": 465.87,
+      "count": 100,
+      "throughput_qps": 3.15,
+      "success_count": 100,
+      "failure_count": 0,
+      "total_wall_sec": 31.728
+    },
+    "filtered_lookup": {
+      "p50": 332.095,
+      "p90": 372.487,
+      "p95": 384.912,
+      "p99": 412.412,
+      "mean": 336.831,
+      "stddev": 34.055,
+      "min": 290.455,
+      "max": 501.794,
+      "count": 100,
+      "throughput_qps": 2.97,
+      "success_count": 100,
+      "failure_count": 0,
+      "total_wall_sec": 33.685
+    },
+    "indexed_properties": [
+      "User.id (Unique Index)"
+    ]
+  },
+  "aggregations": {
+    "degree_aggregation": {
+      "p50": 605.047,
+      "p90": 714.781,
+      "p95": 716.422,
+      "p99": 754.622,
+      "mean": 593.612,
+      "stddev": 77.874,
+      "min": 436.062,
+      "max": 789.283,
+      "count": 50,
+      "throughput_qps": 1.68,
+      "success_count": 50,
+      "failure_count": 0,
+      "total_wall_sec": 29.681
+    },
+    "count_aggregation": {
+      "p50": 308.855,
+      "p90": 365.053,
+      "p95": 372.272,
+      "p99": 400.523,
+      "mean": 311.144,
+      "stddev": 45.339,
+      "min": 250.552,
+      "max": 409.548,
+      "count": 50,
+      "throughput_qps": 3.21,
+      "success_count": 50,
+      "failure_count": 0,
+      "total_wall_sec": 15.558
+    }
+  },
+  "mixed_workload": {
+    "concurrency_1": {
+      "p50": 308.822,
+      "p90": 608.509,
+      "p95": 618.69,
+      "p99": 693.593,
+      "mean": 349.894,
+      "stddev": 128.69,
+      "min": 250.881,
+      "max": 709.963,
+      "count": 50,
+      "concurrency": 1,
+      "read_write_mix": "80% Read / 20% Write",
+      "sustained_qps": 2.86,
+      "total_operations": 50,
+      "wall_time_sec": 17.496
+    },
+    "concurrency_10": {
+      "p50": 258.253,
+      "p90": 540.299,
+      "p95": 554.037,
+      "p99": 1303.58,
+      "mean": 335.156,
+      "stddev": 216.95,
+      "min": 246.766,
+      "max": 3239.436,
+      "count": 500,
+      "concurrency": 10,
+      "read_write_mix": "80% Read / 20% Write",
+      "sustained_qps": 25.95,
+      "total_operations": 500,
+      "wall_time_sec": 19.268
+    },
+    "concurrency_40": {
+      "p50": 284.278,
+      "p90": 658.064,
+      "p95": 725.959,
+      "p99": 1398.185,
+      "mean": 375.363,
+      "stddev": 220.202,
+      "min": 246.155,
+      "max": 3227.513,
+      "count": 2000,
+      "concurrency": 40,
+      "read_write_mix": "80% Read / 20% Write",
+      "sustained_qps": 93.87,
+      "total_operations": 2000,
+      "wall_time_sec": 21.307
+    }
+  },
+  "resource_footprint": {
+    "tier": "Free (c0)",
+    "vcpu": "0.5 vCPU (burstable)",
+    "memory": "256 MB RAM",
+    "storage_limit": "1 GB disk",
+    "engine": "CognoDB Native Graph Engine",
+    "managed_cloud": "Yes (CognoDB Cloud)",
+    "stored_data_size": "not observable (managed tier)",
+    "memory_usage": "not observable (managed tier)"
+  }
+}

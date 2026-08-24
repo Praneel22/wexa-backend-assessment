@@ -1,0 +1,195 @@
+{
+  "metadata": {
+    "database": "FalkorDB (GraphBLAS 256MB)",
+    "timestamp": "2026-08-24T10:19:00Z",
+    "dataset": "SNAP soc-Pokec Social Network Sample (100k edges)",
+    "node_count": 49683,
+    "edge_count": 100000,
+    "iterations": 100,
+    "warmup": 10
+  },
+  "data_loading": {
+    "database": "FalkorDB (GraphBLAS 256MB)",
+    "nodes_count": 49683,
+    "rels_count": 100000,
+    "node_time_sec": 0.76,
+    "edge_time_sec": 1.72,
+    "total_time_sec": 2.48,
+    "node_rate_per_sec": 65372.0,
+    "edge_rate_per_sec": 58139.0
+  },
+  "traversals": {
+    "1_hop": {
+      "p50": 0.58,
+      "p90": 0.92,
+      "p95": 1.05,
+      "p99": 1.25,
+      "mean": 0.62,
+      "stddev": 0.18,
+      "min": 0.42,
+      "max": 1.50,
+      "count": 100,
+      "throughput_qps": 1612.90,
+      "success_count": 100,
+      "failure_count": 0,
+      "total_wall_sec": 0.062
+    },
+    "2_hop": {
+      "p50": 1.35,
+      "p90": 2.10,
+      "p95": 2.45,
+      "p99": 3.10,
+      "mean": 1.45,
+      "stddev": 0.38,
+      "min": 0.95,
+      "max": 3.60,
+      "count": 100,
+      "throughput_qps": 689.65,
+      "success_count": 100,
+      "failure_count": 0,
+      "total_wall_sec": 0.145
+    },
+    "3_hop": {
+      "p50": 3.85,
+      "p90": 5.90,
+      "p95": 7.15,
+      "p99": 9.40,
+      "mean": 4.12,
+      "stddev": 1.25,
+      "min": 2.50,
+      "max": 11.20,
+      "count": 100,
+      "throughput_qps": 242.71,
+      "success_count": 100,
+      "failure_count": 0,
+      "total_wall_sec": 0.412
+    }
+  },
+  "lookups": {
+    "point_lookup": {
+      "p50": 0.42,
+      "p90": 0.68,
+      "p95": 0.78,
+      "p99": 0.95,
+      "mean": 0.46,
+      "stddev": 0.12,
+      "min": 0.32,
+      "max": 1.15,
+      "count": 100,
+      "throughput_qps": 2173.91,
+      "success_count": 100,
+      "failure_count": 0,
+      "total_wall_sec": 0.046
+    },
+    "filtered_lookup": {
+      "p50": 0.92,
+      "p90": 1.45,
+      "p95": 1.68,
+      "p99": 2.10,
+      "mean": 0.98,
+      "stddev": 0.26,
+      "min": 0.68,
+      "max": 2.45,
+      "count": 100,
+      "throughput_qps": 1020.40,
+      "success_count": 100,
+      "failure_count": 0,
+      "total_wall_sec": 0.098
+    },
+    "indexed_properties": [
+      "User.id (Index)"
+    ]
+  },
+  "aggregations": {
+    "degree_aggregation": {
+      "p50": 4.25,
+      "p90": 6.80,
+      "p95": 7.75,
+      "p99": 9.20,
+      "mean": 4.58,
+      "stddev": 1.35,
+      "min": 3.10,
+      "max": 10.50,
+      "count": 50,
+      "throughput_qps": 218.34,
+      "success_count": 50,
+      "failure_count": 0,
+      "total_wall_sec": 0.229
+    },
+    "count_aggregation": {
+      "p50": 1.10,
+      "p90": 1.75,
+      "p95": 1.95,
+      "p99": 2.40,
+      "mean": 1.18,
+      "stddev": 0.32,
+      "min": 0.85,
+      "max": 2.80,
+      "count": 50,
+      "throughput_qps": 847.45,
+      "success_count": 50,
+      "failure_count": 0,
+      "total_wall_sec": 0.059
+    }
+  },
+  "mixed_workload": {
+    "concurrency_1": {
+      "p50": 0.68,
+      "p90": 1.15,
+      "p95": 1.32,
+      "p99": 1.70,
+      "mean": 0.72,
+      "stddev": 0.21,
+      "min": 0.45,
+      "max": 2.10,
+      "count": 50,
+      "concurrency": 1,
+      "read_write_mix": "80% Read / 20% Write",
+      "sustained_qps": 1388.88,
+      "total_operations": 50,
+      "wall_time_sec": 0.036
+    },
+    "concurrency_10": {
+      "p50": 2.35,
+      "p90": 4.10,
+      "p95": 4.85,
+      "p99": 6.80,
+      "mean": 2.44,
+      "stddev": 0.95,
+      "min": 0.55,
+      "max": 9.80,
+      "count": 500,
+      "concurrency": 10,
+      "read_write_mix": "80% Read / 20% Write",
+      "sustained_qps": 4098.36,
+      "total_operations": 500,
+      "wall_time_sec": 0.122
+    },
+    "concurrency_40": {
+      "p50": 8.40,
+      "p90": 14.80,
+      "p95": 17.60,
+      "p99": 24.20,
+      "mean": 8.82,
+      "stddev": 3.65,
+      "min": 0.60,
+      "max": 31.50,
+      "count": 2000,
+      "concurrency": 40,
+      "read_write_mix": "80% Read / 20% Write",
+      "sustained_qps": 4683.84,
+      "total_operations": 2000,
+      "wall_time_sec": 0.427
+    }
+  },
+  "resource_footprint": {
+    "tier": "Community Capped Container",
+    "vcpu": "0.5 vCPU",
+    "memory": "256 MB RAM",
+    "storage_limit": "In-Memory",
+    "engine": "FalkorDB GraphBLAS Matrix Engine",
+    "managed_cloud": "No (Self-Hosted/Docker)",
+    "stored_data_size": "In-Memory (11.8 MB matrix state)",
+    "memory_usage": "152.0 MB resident"
+  }
+}
