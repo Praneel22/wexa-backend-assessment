@@ -4,12 +4,14 @@ from databases.cognodb import CognoDBAdapter
 from databases.kuzu_adapter import KuzuAdapter
 from databases.neo4j_adapter import Neo4jAdapter
 from databases.memgraph_adapter import MemgraphAdapter
+from databases.falkordb_adapter import FalkorDBAdapter
 
 SUPPORTED_DATABASES = {
     "cognodb": CognoDBAdapter,
     "kuzu": KuzuAdapter,
     "neo4j": Neo4jAdapter,
     "memgraph": MemgraphAdapter,
+    "falkordb": FalkorDBAdapter,
 }
 
 
@@ -22,6 +24,7 @@ def get_database(name: str, **kwargs) -> BaseGraphDatabase:
     - 'kuzu': Kùzu Columnar Graph Database (256MB capped)
     - 'neo4j': Neo4j (AuraDB / Community)
     - 'memgraph': Memgraph (In-Memory)
+    - 'falkordb': FalkorDB (GraphBLAS Sparse Matrix)
     """
     key = name.lower().strip()
     if key not in SUPPORTED_DATABASES:
